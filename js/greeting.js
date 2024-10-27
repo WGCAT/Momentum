@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const btnLogout = document.querySelector("#btnLogout");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -19,8 +20,23 @@ function onLoginSubmit(event) {
 
 // 유저정보를 받아서 인자로 넣고 히든 삭제하는 함수
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `Hello, ${username}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    btnLogout.classList.remove(HIDDEN_CLASSNAME);
+    btnLogout.addEventListener("click", onLogOut);
+}
+
+function paintForm() {
+    loginInput.value = "";
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+}
+
+function onLogOut() {
+    greeting.classList.add(HIDDEN_CLASSNAME);
+    btnLogout.classList.add(HIDDEN_CLASSNAME);
+    paintForm();
+    localStorage.removeItem(USERNAME_KEY);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);

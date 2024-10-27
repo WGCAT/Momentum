@@ -1,3 +1,125 @@
-.hidden {
-    display: none;
+body,
+html {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+html {
+  overflow: hidden;
+  background: #000000;
+  font-size: 62.5%;
+}
+  
+h1,
+h2,
+h3
+ {
+  margin: 0;
+}
+  
+body {
+  animation: fadeIn 0.8s ease-in-out forwards;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+input {
+  background: none;
+  border: 0;
+  font-size: 22px;
+  color: white;
+  border-bottom: 2px solid white;
+}
+  
+input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+  
+input:focus,
+input:active {
+  outline: none;
+}
+
+.hidden{
+  display:none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+  object-fit: cover;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+  
+#weather {
+  font-style: italic;
+  font-size: 1.2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+  
+#weather span:last-child {
+  opacity: 0.5;
+}
+
+#date {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+  
+#clock {
+  font-size: 8rem;
+}
+
+.greetingContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 3.4rem;
+  padding-top: 7px;
+  padding-bottom: 25px;
+}
+
+#btnLogout {
+  margin-top: 5px;
+}
+  
+#login-form {
+  padding-top: 17px;
+}
+
+fotter {
+  opacity: 0.7;
+  position: absolute;
+  bottom: 25px;
+  margin: auto 13px;
 }

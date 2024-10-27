@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Digimon</title>
-</head>
-<body>
-    <h2 id="clock">00:00</h2>
-    <form class="hidden" id="login-form">
-      <input required maxlength="12" type="text" placeholder="What is your name?" />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter." required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css" />
+      <title>TO DO LIST</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="weather" class="weather">
         <span></span>
         <span></span>
-    </div>
-    <div id="weather">
+      </div>
+    </header>
+    <main>
+      <h1 id="date"></h1>
+      <h2 id="clock"></h2>
+      <form id="login-form" class="hidden">
+        <input
+          id="loginFormInput"
+          type="text"
+          maxlength="15"
+          placeholder="What's your name?"
+          required
+        />
+      </form>
+      <div class="greetingContainer">
+        <h3 id="greeting" class="hidden"></h3>
+        <button id="btnLogout" class="hidden">X</button>
+      </div>
+      <form id="todo-form">
+        <input
+          type="text"
+          id="toDoInput"
+          placeholder="Write To Do List."
+          required
+        />
+      </form>
+        <ul id="todo-list"></ul>
+    </main>
+    <fotter>
+      <div id="quote" style="text-align: center;">
         <span></span>
         <span></span>
-    </div>
+      </div>
+    </fotter>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-</body>
+  </body>
 </html>

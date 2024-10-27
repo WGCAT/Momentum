@@ -42,7 +42,7 @@ const quotes = [
     {
         quote: "동료에게 도움을 요청하세요. 빨리 그리고 자주 말이죠.",
         author: "Jill Konrath",
-    },
+    }
 ];
 
 const quote = document.querySelector("#quote span:first-child");
